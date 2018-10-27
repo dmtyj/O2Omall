@@ -1,0 +1,60 @@
+{
+  "pages": [
+      "pages/store/products/list/list",
+      "pages/store/booking/detail/detail",
+      "pages/store/order/myorder/myorder",
+      "pages/store/account/account/account",
+      "pages/store/products/detail/detail",
+      "pages/store/history/payout/payout",
+      "pages/store/history/payin/payin",
+      "pages/store/account/profile/profile",
+      "pages/store/account/income/income",
+      "pages/store/order/detail/detail"
+     
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "O2O商城",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":false,
+    "backgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/store/products/list/list",
+      "iconPath": "res/manager/tabs/store_normal.png",
+      "selectedIconPath": "res/manager/tabs/store_select.png",
+      "text": "商店"
+    },
+      {
+        "pagePath": "pages/store/booking/detail/detail",
+        "iconPath": "res/manager/tabs/bespeak_normal.png",
+        "selectedIconPath": "res/manager/tabs/bespeak_select.png",
+        "text": "预约"
+      },
+      {
+        "pagePath": "pages/store/order/myorder/myorder",
+        "iconPath": "res/manager/tabs/order_normal.png",
+        "selectedIconPath": "res/manager/tabs/order_select.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/store/account/account/account",
+        "iconPath": "res/manager/tabs/profile_normal.png",
+        "selectedIconPath": "res/manager/tabs/profile_select.png",
+        "text": "账户"
+      }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

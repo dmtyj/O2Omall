@@ -1,0 +1,36 @@
+<!--轮播图-->
+<view class='top'>
+  <swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}'>
+    <block wx:for='{{imgUrls}}'>
+      <swiper-item>
+        <navigator hover-class='navigator-hover'>
+          <image src='{{item.url}}' class='slide-image' />
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!--主体商品-->
+<view class='myrow'>
+  <view class='img' wx:for='{{menubar}}'>
+    <image src='{{item.img}}' bindtap='{{item.link}}' class='imgbar'></image>
+    <view class='name'>{{item.name}}</view>
+  </view>
+</view>
+
+<view class='table-list'>
+  <view class='row border-item-1 pad-10' style='padding-top:26rpx;' wx:for='{{goods}}'>
+    <view style='width:200rpx;' class='push-r-10'>
+      <image bindtap='detail' style='helight:70rpx;width:100rpx;' data-id='{{item._id}}' mode='widthFix' src='{{item.cover}}'></image>
+    </view>
+    <view style='width:50%' class='psush-r-10'>
+      <view class='hiddenover'>
+        <text bindtap='detail' data-id='{{item._id}}' class='price'>￥{{item.show_price}}</text>
+      </view>
+    </view>
+    <view style='width:30%;min-width:160rpx;'>
+      <button size='mini' bindtap='addtocard' data-id='{{item._id}}' type='primary' data-price='detail'>购买</button>
+    </view>
+  </view>
+</view>
