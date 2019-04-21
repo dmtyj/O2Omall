@@ -1,0 +1,44 @@
+ <!-- 配送信息 -->
+<view class="block ">
+	<form>
+	<view class="block-content row rm-padding">
+	<view class="form-group" >
+      <label for="mobile"><text>姓名</text></label>
+    </view>
+	<view class="form-group" >
+      <label for="mobile"><text>{{userdata.nickName}}</text></label>
+    </view>
+	<view class="form-group">
+      <label for="mobile"><text>联系电话</text></label>
+  <input maxlength="11" name="mobile" placeholder-class="text-muted" value="{{userdata.mobile}}" bindinput="mobile" type="text" placeholder="请填写联系电话"/>
+    </view>
+	<view class="form-group" >
+      
+      <label for="address" class="pull-left">
+        <text>收货地址（家）</text>
+      </label>
+  <image class="push-r-10 pull-right imgsize"bindtap="address_1" mode="widthFix" src="{{src}}"></image> 
+  <input class="clear" name="addr_01" value="{{userdata.addr_01}}" placeholder-class="text-muted" type="text" placeholder="请填写收货地址" />
+
+    </view>
+   	<view class="form-group" >
+      <label for="address" class="pull-left">
+        <text>收货地址（公司）</text>
+      </label>
+
+      <image class="push-r-10 pull-right imgsize" 
+          bindtap="address_2"   
+          mode="widthFix" src="{{src}}"></image> 
+      <input 
+        class="clear"
+        name="addr_02"
+        value="{{userdata.addr_02}}"
+        placeholder-class="text-muted"  
+        type="text" placeholder="请填写收货地址" /> 
+	</view>
+	<view class="form-group">
+		<button type="warn" size="{{size}}" class="left-but" formType="submit">确认</button>
+	</view>	
+  </view>
+  </form>
+</view> <!-- END 配送信息 -->

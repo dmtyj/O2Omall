@@ -1,0 +1,17 @@
+ <view class="table-list">
+ <view class="row border-item-1 pad-10"  style="padding-top:26rpx;" wx:for="{{xf}}" wx:key="_id">
+      <view style="width:85% " class="push-r-10">
+          <view class="overhidden"><text class="font-s14">{{item.show_name}}</text></view>
+          <view class="overhidden">
+            <text class="font-s14  text-muted">单号:{{item.sn}}</text>
+          </view>
+           <view class="overhidden">
+            <text class="font-s14 {{item.show_status.style}}">日期: {{item.created_at}} </text>
+          </view>
+      </view>
+
+      <view class="push-t-5 price">
+        -{{item.amount}}
+      </view>
+    </view>
+</view> 

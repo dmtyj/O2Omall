@@ -1,0 +1,25 @@
+@import "../../wxss/style.wxss"
+
+.right-but{
+	float: right;
+	position: relative;
+	left: -15%;
+
+}
+
+.bottombar {
+	bottom: 0px;
+	border: 1px solid #ffffff;
+  border-top: 1px solid #EEEEE0;
+	background: #ffffff;
+	color:#ffffff;
+	position: fixed;
+	line-height: 100rpx;
+	height:100rpx;
+	width: 100%;
+	z-index: 1000;
+}
+
+.checkbox{
+  border-radius: 100rpx;
+}

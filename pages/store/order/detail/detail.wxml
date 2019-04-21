@@ -1,0 +1,104 @@
+<view class="block border-item-1"  wx:if="{{order.sn}}">
+	<view class="block-content row ">
+		<view class="pull-left push-l-10 push-r-10"> 
+			<text>订单号: </text>
+			<text>{{order.sn}}</text>
+		</view >
+		<view class="text-right pull-right  push-l-10 push-r-10">
+			<view>
+				<text class="text-warn">待支付</text>
+			</view>
+		</view>
+	</view>
+</view>
+<!-- 商品列表 -->
+<view class="block ">
+	<view class="block-title border-item-1">
+		<text class=" push-l-10 push-r-10" > 商品清单 </text>
+	</view>
+
+	<view class="block-content row rm-padding">
+		
+		<view class="table-list push-l-20" >
+			<view class="row border-item-1 pad-10"  wx:for="{{goods}}" wx:key="id" >
+				
+				<!-- 商品名称 -->
+				<view class="pull-left  push-r-10" style="width:40%" >
+					<image mode="widthFix" style='width:140rpx;height:100rpx' src="{{item.corver}}"></image>
+				</view>
+				
+				<!-- 商品信息 -->
+				<view class="pull-right push-r-10 column" style="width:60%;" >
+					<view> {{item.name}} </view>
+					<view class="push-t-5 text-muted font-s14 overhidden"> {{item.summary}} </view>
+					<view class="push-t-10 row">
+						<text class="text-primary"> {{item.show_price}} 元 </text>
+						<text class="text-primary push-l-10"> X </text>
+						<text class="text-primary push-l-10"> {{item.amount}} </text>
+					</view>
+				</view>
+
+			</view>
+
+			<!-- 商品合计单价 -->
+			<view class="row  text-right pad-10"  >
+				<view class=" text-primary" style="width:100%;"> 合计: {{order.total_price}} 元</view>
+			</view>
+		</view>
+
+	</view>
+
+</view> <!-- END 商品列表 -->
+
+
+<view class="block ">
+		<view class="block-title border-item-1">
+			<text class=" push-l-10 push-r-10" > 配送信息 </text>
+		</view>
+		<view class="block-content view-row border-item-1">
+			
+			<view>
+				<image class="push-r-10 push-l-10" 
+						style="width:48rpx;height:48rpx;" 
+						bindtap="chooselc"   
+						mode="widthFix" src="/res/icons/lc.png"></image> 
+			</view>
+			<view class="view-column">
+				<view class="push-t-5">
+					<text class="push-r-10">{{order.contact}}</text> 
+					<text>{{order.mobile}}</text> 
+				</view>
+
+				<view class="push-t-5">
+					<text class="text-muted font-s14">{{order.address}}</text> 
+				</view>
+			</view>
+		</view>
+		<view class="phrow" style="margin-bottom:60rpx;"></view>
+</view>
+<view>
+	<!-- 选择支付方式 -->
+	<view class="block ">
+		<view class="block-title border-item-1">
+		    <text class=" push-l-10 push-r-10" >选择支付方式</text>
+		</view>
+	  	<radio-group class="radio-group">
+			<view class="view-way">
+		      <radio data-value="cardpay" bindtap="come" class="card-way" checked="checked"/>会员卡余额 （ 可用 {{amount}} 元）
+		    </view>
+		    <view class="view-way">
+		      <radio data-value="wxpay" bindtap="come" class="card-way"/>微信支付 
+		    </view>
+	  	</radio-group>
+	  	<view class="phrow" style="margin-bottom:60rpx;"></view>
+	</view> <!-- END 配送信息 -->
+</view>
+
+
+
+<!-- 功能表单区  -->
+<view class="bottombar bg-grey view-row">
+	<view class="text-right" style="width:60%">
+		<button class="push-t-10 push-r-10" type="warn" size="mini" bindtap="payat"> 付款  </button>
+	</view>
+</view> <!-- 功能表单区 -->

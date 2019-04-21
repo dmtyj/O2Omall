@@ -1,0 +1,11 @@
+@import "../../wxss/style.wxss";
+.imgsize{
+  width:48rpx;height:48rpx
+}
+.left-but{
+	width:100%;
+	float: left;
+  position: fixed;
+  left:0px;
+  bottom: 0px;
+}

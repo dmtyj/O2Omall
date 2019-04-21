@@ -1,0 +1,30 @@
+
+<view class="topbar">
+   <view class="row"> 
+    <view style="width:60%" data-item="0" class="push-r-15 {{top[0]}}" bindtap="topbar" >全部</view>
+    <view style="width:60%" data-item="1" class="push-r-15 {{top[1]}}" bindtap="topbar">待付款</view>
+    <view style="width:60%" data-item="2" class="push-r-15 {{top[2]}}" bindtap="topbar">配送中</view>
+   </view> 
+</view>
+ <view class="order-table-list">
+ <view class="row border-item-1 pad-10"  style="padding-top:26rpx;" wx:for="{{orders}}" wx:key="_id" >
+      <view style="width:160rpx;" class="push-r-10 push-t-5 ">
+        <image mode="widthFix" src="{{item.corver}}" style="width:120rpx;height:85rpx"></image>
+      </view>
+      <view style="width:50% " class="push-r-10">
+          <view class="overhidden"><text class="font-s14">{{item.show_name}}</text></view>
+          <view class="overhidden">
+            <text class="font-s14  text-muted">单号:{{item.sn}}</text>
+          </view>
+           <view class="overhidden">
+            <text class="font-s14 {{item.show_status.style}}">订单状态: {{item.show_status.name}} </text>
+          </view>
+      </view>
+
+      <view style="width:10%;min-width:160rpx;" class="push-t-5">
+        <button type="warn" size="mini" loading="{{loading}}" plain="true" data-id="{{item._id}}"
+          bindtap="detail"> 查看 </button>
+      </view>
+    </view>
+</view>  
+

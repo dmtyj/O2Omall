@@ -1,5 +1,16 @@
 Page({
-  data: {},
+  data: {
+    size: 'default',    //按钮大小为默认
+    type: ''     
+  },
+
+  select:function(e){
+    var that = this;
+    var val = e.target.dataset.flag;
+    that.setData({ type: val });
+    console.log(this.data.type)
+  },
+
    onLoad: function (options) {
     console.log("onLoad")
   },

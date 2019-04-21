@@ -1,0 +1,56 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="block">
+      <view class="block-content row rm-padding">
+        <view class="form-group push-t-15">
+          <view class="section">  
+          <picker name="goods" class="push-t-10" bindchange="service" value="{{index}}" range="{{array}}">
+            <view class="picker font-s15">服务项目：{{array[index]}}</view>
+          </picker>
+           </view>  
+        </view>
+        
+        <view class="form-group push-t-15">
+          <view class="section">  
+            <picker mode="date" value="{{dates}}" start="2017-01-01" end="2020-12-31" bindchange="bindDateChange">  
+              <view class="picker">  
+              到店日期：{{dates}} 
+              </view>  
+            </picker>  
+          </view>  
+        </view>
+
+        <view class="form-group push-t-15">
+       <view class="section">  
+        <picker mode="time" value="{{times}}" start="00:00" end="23:59" bindchange="bindTimeChange">  
+          <view class="picker">  
+          到店时间：{{times}}
+          </view>  
+        </picker>  
+      </view> 
+        </view> 
+
+        
+        <view class="form-group push-t-15">
+          <label for="remark"><text>留言</text></label>
+          <input 
+            name="remark" 
+            class="text-warn font-s15"
+            placeholder-class="text-muted"
+            value="{{remark}}"
+            type="text"/>
+        </view>
+        <view class="form-group" style="margin-bottom:180rpx;"></view>
+      </view>
+    </view>
+    <view style="width:100%">
+      <button 
+        class="bottombar push-t-10 push-l-10"
+        loading="{{locked}}"
+        style="background-color: #ff2150;margin-left:0;"
+        disabled="{{locked}}" formType="submit">立即预约</button>
+    </view>
+  </form>
+
+
+
+

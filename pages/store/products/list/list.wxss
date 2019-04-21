@@ -1,0 +1,89 @@
+@import "../../wxss/style.wxss";
+
+ 
+.slide-image{
+width:400px;
+height:150px;
+}
+
+.imgbar{
+  position: relative; 
+  left:10rpx;
+  width: 35px; 
+  height: 35px; 
+  background-color: #ffffff;
+}
+
+.bottombar {
+	bottom: 0px;
+	border: 1px solid #ffffff;
+  border-top: 1px solid #EEEEE0;
+	background: #ffffff;
+	color:#ffffff;
+	position: fixed;
+	line-height: 100rpx;
+	height:100rpx;
+	width: 100%;
+	z-index: 1000;
+}
+
+.bottombar text {
+	color: #ffffff;
+	font-weight: 400;
+	font-size: 30rpx;
+}
+.bottombar image {
+	width: 60rpx;
+	height: 60rpx;
+	margin:20rpx;
+	margin-bottom:0;
+}
+.text-mimi{
+	font-size: 25rpx;
+	color: #81c7d1;
+	margin-left: 10rpx;
+}
+
+.hiddenover{
+   width: 400rpx; 
+   overflow: hidden; 
+   text-overflow: ellipsis;
+   white-space: nowrap; 
+   margin-top: -5px;
+}
+
+.price{
+  color: #ff2150;
+  position: absolute;
+  margin-top:10rpx;
+  font-size:30rpx;
+}
+
+.item-name{
+  font-size: 28rpx;
+}
+
+.myrow{
+  height: 180rpx;
+  margin-top: 70rpx;
+  width: 780rpx;
+}
+
+.img{
+  position: relative; 
+  display: inline;
+  margin-left: 20rpx; 
+}
+
+.name{
+   position: relative; 
+  font-size: 23rpx;  
+  display: inline;
+  top: 40rpx;
+  left:-70rpx;
+  z-index: 100;
+}
+
+.slide-image{  
+    width: 100%;  
+}  

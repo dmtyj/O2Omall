@@ -1,0 +1,86 @@
+@import "../../wxss/style.wxss"
+
+.pull_right{
+  float:right;
+}
+
+.info{
+  /* display: block; */
+}
+.cover{
+  display: inline;
+}
+
+.name{
+  display: inline;
+  /* width: 200rpx; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap;  */
+}
+
+.price{
+  display: inline;
+}
+
+ /* .product_name{
+  width: 200rpx; 
+  overflow: hidden; 
+   text-overflow: ellipsis;
+  white-space: nowrap; 
+}  */
+
+.number{
+  display: block;
+}
+
+.topbar{
+  display: flex;
+	flex-direction:column;
+  margin-top: -45rpx;
+}
+
+.topbar .row{
+  position: relative;
+  margin-left: 40rpx;
+  display: flex;
+	flex-direction:row;
+}
+
+.active{
+  border-bottom: 3rpx solid #ff2150;
+  font-weight: 900px;
+}
+.topitem{
+  position: relative;
+  width: 500rpx;
+  margin-left: 100rpx;
+}
+
+.order-table-list{
+  margin-top: 45rpx;
+	display: flex;
+	flex-direction:column;
+}
+
+.order-table-list .row  {
+	display: flex;
+	flex-direction:row;
+}
+
+
+.order-table-list .column { flex-direction: column; }
+
+.order-table-list .row image  {
+	width:100%;
+}
+
+.order-table-list .row view{
+	height: auto;
+}
+
+.push-r-15{
+  position: relative;
+  margin-right: 15rpx;
+  text-align: center;
+}

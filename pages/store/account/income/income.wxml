@@ -1,0 +1,53 @@
+<view class="block">
+	<form>
+	<view class="form-group">
+		<input type="digit" placeholder="请输入充值金额" name="amount"/>
+	</view>
+	</form>
+  <view class="table-list" style="padding-top:88rpx;">
+
+	<radio-group class="radio-group">
+  <view class="row border-item-1 pad-10" style="padding-top:26rpx;" >
+		<view class="push-r-10">
+			<image mode="widthFix" style="width:48rpx;height:48rpx" src="/res/icons/icon_qp.png"></image>
+		</view>
+		<view style="width:60%" class="push-r-10">
+			<text class="font-s16" style="line-height:48rpx;">快捷支付</text>
+		</view>
+		<view style="width:30%" class="push-r-10 text-right">
+		  <radio value="radio1" data-flag="0" bindtap="select" checked="checked"/>
+		</view>
+	</view>
+
+	<view class="row border-item-1 pad-10" style="padding-top:26rpx;" >
+		<view class="push-r-10">
+			<image mode="widthFix" style="width:48rpx;height:48rpx" src="/res/icons/icon_yl.png"></image>
+		</view>
+		<view style="width:60%" class="push-r-10">
+			<text class="font-s16" style="line-height:48rpx;">银联支付</text>
+		</view>
+		<view style="width:30%" class="push-r-10 text-right">
+			<radio value="radio2" data-flag="1" bindtap="select"/>
+		</view>
+	</view>
+
+	<view class="row border-item-1 pad-10" style="padding-top:26rpx;" >
+		<view class="push-r-10">
+			<image mode="widthFix" style="width:48rpx;height:48rpx" src="/res/icons/icon_wx.png"></image>
+		</view>
+		<view style="width:60%" class="push-r-10">
+			<text class="font-s16" style="line-height:48rpx;" >微信支付</text>
+		</view>
+		<view style="width:30%" class="push-r-10 text-right">
+			 <radio value="radio3" data-flag="2" bindtap="select"/>
+	</view>
+	</view>
+	</radio-group>
+	<view class="phrow"></view>
+</view>
+<view class="bottombar">
+  	<view class="">
+			<button style="background-color: #f15b6c;color:#fff" size="{{size}}" formType="submit" class="left-but">确认</button>
+		</view>
+</view>
+</view>

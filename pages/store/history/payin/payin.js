@@ -1,5 +1,9 @@
 Page({
   data: {
+    payin: [
+      { show_name: '云计算在线课程系列', sn: '156254985426', created_at: '2018-01-01', amount: '100' },
+      { show_name: '云计算在线课程系列', sn: '156254985426', created_at: '2018-01-01', amount: '100' }
+    ]
   },
 
   onLoad: function (options) {

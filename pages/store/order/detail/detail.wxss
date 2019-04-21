@@ -1,0 +1,12 @@
+@import "../../wxss/style.wxss";
+.radio-group{
+	width: 90%;
+	margin: 0 auto;
+}
+.view-way{
+	margin-top: 10rpx;
+	border-bottom: 1px solid #ccc;
+	font-size: 30rpx;
+
+}
+

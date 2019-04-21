@@ -1,5 +1,12 @@
 Page({
-  data: {},
+  data: {
+    size: 'mini',
+    src: '/res/icons/lcc.png',
+    user: '/pages/store/user/user/user',
+    userdata: { nickName: 'tjpccy', mobile: '182398765', addr_01: '', addr_02: ''}
+  },
+  
+
   onLoad: function (options) {
     console.log("onLoad")
   },

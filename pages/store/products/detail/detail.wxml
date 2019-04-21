@@ -1,0 +1,39 @@
+<view class="btn-area">
+  <view class="body-view">
+	  	<view class="view-top">
+			<swiper interval="3000" autoplay="true">
+			  <block wx:for="{{images}}"  wx:key="images">
+			    <swiper-item>
+            <image src="{{item}}" class="slide-image"/>  
+			    </swiper-item>
+			  </block>
+			  <view class="content">
+				  <view class='view-title'>{{name}}</view>
+			  </view>
+			</swiper>
+			<view class="photo-left">
+	  			<view class="view-jg">价格：{{price}}</view>
+	  			<view class="view-ljgm">
+	  				<button type="primary" size="mini" bindtap='buy' data-price='{{price}}'>购买</button>
+	  			</view>
+	  		</view>
+		</view>
+		 <view class="view-top">
+	  		<view class="photo-left">
+	  			{{body}}
+	  		</view>
+		</view>
+	</view>
+</view>
+<view class="bottombar view-row">
+    <view style="width:88rpx;">
+      <image mode="widthFix" src="/res/icons/shop.png"></image>
+    </view>
+    <view  style="width:40%">
+      <text style="padding-left:20rpx;"> {{cart.total}} 件商品 {{cart.show_price}} 元 </text>
+    </view>
+    <view class="text-right" style="width:50%">
+      <button class="push-t-10 push-r-10" type="warn" size="mini" loading="{{loading}}" disabled="{{disabled}}" 
+            data-link="{{order}}" bindtap="linkto"> 生成订单 </button>
+      </view>
+  </view>

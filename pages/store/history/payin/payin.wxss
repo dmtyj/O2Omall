@@ -1,0 +1,7 @@
+@import "../../wxss/style.wxss";
+
+.price{
+    width:20%;
+    min-width:160rpx;
+    float:right;color:#ed1941
+}

@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.1",
 	"appid": "touristappid",
-	"projectname": "o2omallstudent",
+	"projectname": "o2omall",
 	"condition": {
 		"search": {
 			"current": -1,

@@ -1,0 +1,58 @@
+<view class="btn-title" style="background-image: url(/res/icons/profile_bg.png)">
+   <image  src="{{ewm}}" class="ewm-logo" mode="aspectFit"></image> 
+  <view class="body-title">{{user.nickName}}</view>
+  <view class="body-num" style="font-size:30rpx;">会员卡号：{{user.cid}}</view>
+</view>
+
+<view class="table-list" style="padding-top:88rpx;">
+  <view style="height:3rpx;width:100%;background-color:#F7F7F7">
+  </view>
+
+  <view class="row border-item-1 pad-10" style="padding-top:26rpx;margin-bottom:20rpx;" >
+		<view class="push-r-10">
+			<image mode="widthFix" style="width:48rpx;height:48rpx" src="/res/icons/icon_ye.png"></image>
+		</view>
+		<view style="width:50%" class="push-r-10">
+			<text class="font-s16" style="line-height:48rpx;">余额</text>
+		</view>
+		<view style="width:40%" class="push-r-10 text-right" bindtap="payout">
+      ￥{{amount}}<text style="border:1rpx solid red;color:red;margin-left:25rpx;font-size:30rpx;">充值</text>
+		</view>
+	</view>
+
+	<view class="row border-item-1 pad-10" style="padding-top:26rpx;" >
+		<view class="push-r-10">
+			<image mode="widthFix" style="width:48rpx;height:48rpx" src="/res/icons/icon_xf.png"></image>
+		</view>
+		<view style="width:60%" class="push-r-10" data-link="{{payout}}" bindtap="linkto">
+			<text class="font-s16" style="line-height:48rpx;">消费记录</text>
+		</view>
+		<view style="width:30%" class="push-r-10 text-right">
+			<image mode="widthFix" style="width:48rpx;height:48rpx" src="/res/icons/right.png"></image>
+		</view>
+		
+	</view>
+	<view class="row border-item-1 pad-10" style="padding-top:26rpx;" >
+		<view class="push-r-10">
+			<image mode="widthFix" style="width:48rpx;height:48rpx" src="/res/icons/icon_cz.png"></image>
+		</view>
+		<view style="width:60%" class="push-r-10" data-link="{{payin}}" bindtap="linkto">
+			<text class="font-s16" style="line-height:48rpx;">充值记录</text>
+		</view>
+		<view style="width:30%" class="push-r-10 text-right">
+			<image mode="widthFix" style="width:48rpx;height:48rpx" src="/res/icons/right.png"></image>
+		</view>
+	</view>
+	<view class="row border-item-1 pad-10" style="padding-top:26rpx;" >
+		<view class="push-r-10">
+			<image mode="widthFix" style="width:48rpx;height:48rpx" src="/res/icons/icon_qp.png"></image>
+		</view>
+		<view style="width:60%" class="push-r-10" data-link="{{userurl}}" bindtap="linkto">
+			<text class="font-s16" style="line-height:48rpx;" >我的资料</text>
+		</view>
+		<view style="width:30%" class="push-r-10 text-right">
+			<image mode="widthFix" style="width:48rpx;height:48rpx" src="/res/icons/right.png"></image>
+		</view>
+	</view>
+	<view class="phrow"></view>
+</view>
